@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+		<title>Simple Map</title>
+		<link rel="stylesheet" href="http://js.arcgis.com/3.12/esri/css/esri.css">
+		<style>
+			html, body, #map {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background-color: #FFF;
+				overflow: hidden;
+				font-family: "Trebuchet MS";
+			}
+		</style>
+		<script src="http://js.arcgis.com/3.12/"></script>
+		<script>
+			var map;
+
+			require([
+				"esri/map",
+				"esri/layers/FeatureLayer",
+				"dojo/domReady!",
+				], function(Map, FeatureLayer) {
+				map = new Map("map", {
+					basemap: "streets",
+					center: [-115.195684, 36.114539], // longitude, latitude
+					zoom: 15
+				});
+
+				var sittersLayer = new FeatureLayer("http://services.arcgis.com/T4ElzZ5y0uIajYQQ/arcgis/rest/services/sitters/FeatureServer/0",{
+					//infoTemplate: template,
+					outFields: ["*"]
+				});
+				sittersLayer.on('click', function(e) {
+					console.log(e.graphic.attributes.sitter_id);
+				});
+				map.addLayer(sittersLayer);
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="map"></div>
+	</body>
+</html>
