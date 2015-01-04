@@ -12,7 +12,7 @@
     </head>
     <body>
 
-        <div id="page_home" style="display: none;">
+        <div id="page_home" style="display: block;">
             <div id="logo"></div>
             <table class="button_table">
                 <tr>
@@ -35,7 +35,7 @@
             </table>
         </div>
 
-        <div id="page_map" style="display: block;">
+        <div id="page_map" style="visibility: hidden;">
             <div class="header">
                 <div class="header_content">
                     Filter: Today (6-10pm) <div id="header_action" class="icon_arrow_down"></div>
@@ -80,17 +80,36 @@
             </div>
             <div id="sitter_map_container">
                 <div id="map"></div>
-                <div id="map_profile" style="display: block;">
-                    <div style="padding: 4px; color: #fff; background: #283748;">Karen H.</div>
+                <div id="map_profile">
+                    <div style="padding: 8px 6px 6px 6px; color: #fff; background: #283748;">Karen H.</div>
                     <div class="profile">
                         <div class="profile-photo-backdrop"></div>
-                        <table>
+                        <table style="width: 100%; padding: 10px;">
                             <tr>
                                 <td>
                                     <div class="profile-photo-round"></div>
                                 </td>
-                                <td>
-                                    Sitters Available Services:
+                                <td style="color: #808080; text-transform: uppercase; font-size: 16px; text-align; center;">
+                                    <div>Sitter's Available Services:</div>
+                                    <table class="button_table">
+                                        <tr>
+                                            <td>
+                                                <div class="filter_button btn_baby_blue"></div>
+                                                <hr />
+                                            </td>
+                                            <td class="unavailable">
+                                                <div class="filter_button btn_pet_blue"></div>
+                                                <hr />
+                                            </td>
+                                            <td>
+                                                <div class="filter_button btn_house_blue"></div>
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div id="whitepages_verified">
+                                        Verified <div class="icon_check_gray"></div>
+                                    </div>
                                 </td>
                             </tr>
                         </table>
@@ -98,19 +117,24 @@
                     <div>
                         <table class="profile-deets">
                             <tr>
-                                <td><h3>15</h3># Of Sits</td>
-                                <td><h3>25</h3>Age</td>
+                                <td>
+                                    <h3>15</h3>
+                                    <h4># Of Sits</h4>
+                                </td>
+                                <td>
+                                    <h3>25</h3>
+                                    <h4>Age</h4>
+                                </td>
                             </tr>
                         </table>
                     </div>
-                    <div>
-                        Bio:
-                        <p>Bio data goes here</p>
-                    </div>
-                    <div>
-                        <div><button>Video Interview</button></div>
-                        <div><button>Book This Sitter</button></div>
-                        <div><button>Cancel</button></div>
+                    <div style="padding: 10px;">
+                        <div id="video-bio">WATCH VIDEO BIO</div>
+                        <h4>BIO:</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae urna a justo efficitur pretium.</p>
+                        <div><button class="primary">Video Interview</button></div>
+                        <div><button class="primary">Book This Sitter</button></div>
+                        <div><button id="profile-close" class="secondary">Cancel</button></div>
                     </div>
                 </div>
             </div>

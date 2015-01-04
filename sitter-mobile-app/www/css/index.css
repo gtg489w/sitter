@@ -161,7 +161,7 @@ body {
     background: #fff;
     max-height: 0;
     overflow: hidden;
-    color: #333;
+    color: #283748;
     font-size: 14px;
 
     /* Set our transitions up. */
@@ -170,7 +170,22 @@ body {
     transition: max-height 0.8s;
 }
 .header_menu.open {
-    max-height: 200px;
+    max-height: 500px;
+}
+.filter_selected {
+    position: relative;
+    border: 1px solid #283748;
+    border-radius: 8px;
+    padding: 12px 0px
+}
+.filter_selected_mark {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 32px;
+    height: 32px;
+    background: url(../img/icon_check_blue.png) center center no-repeat;
+    background-size: contain;
 }
 .filter_button {
     width: 50px;
@@ -192,6 +207,55 @@ body {
 }
 .header_menu hr {
     margin: 10px 20px 10px 20px;
+    border-color: #283748;
+}
+#additional_filters {
+    font-size: 16px;
+    color: #666666;
+    width: 100%;
+    margin-top: 40px;
+}
+#additional_filters td {
+    padding-top: 12px;
+}
+.input {
+    padding: 8px 20px 6px 20px;
+    /*border: 1px solid #999;*/
+    border-radius: 8px;
+    color: #283748;
+    -webkit-box-shadow: inset 0px 0px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 5px -1px rgba(0,0,0,0.75);
+}
+.icon_calendar {
+    width: 22px;
+    height: 22px;
+    background: url(../img/icon_calendar.png) center center no-repeat;
+    background-size: contain;
+    float: left;
+    position: relative;
+    top: -3px;
+    left: -8px;
+}
+.icon_clock {
+    width: 22px;
+    height: 22px;
+    background: url(../img/icon_time.png) center center no-repeat;
+    background-size: contain;
+    float: left;
+    position: relative;
+    top: -3px;
+    left: -8px;
+}
+.icon_star {
+    width: 40px;
+    height: 40px;
+    background: url(../img/icon_star.png) center center no-repeat;
+    background-size: contain;
+    float: left;
+}
+.icon_star.empty {
+    opacity: .4;
 }
 .profile-photo-round {
     width: 120px;

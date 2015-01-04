@@ -210,11 +210,87 @@ body {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    opacity: .4;
+    z-index: -1;
+    opacity: .2;
     background: url(../img/profile.jpg) center center no-repeat;
     background-size: cover;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+}
+.profile-deets {
+    position: relative;
+    top: -2px;
+    background: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+.profile-deets td {
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+}
+.profile-deets h3 {
+    margin: 0px;
+}
+h4 {
+    margin: 0px;
+    font-size: 16px;
+    color: #808080;
+}
+.unavailable {
+    opacity: .2;
+}
+.profile hr {
+    margin: 10px 8px 10px 8px;
+}
+#video-bio {
+    color: #6fc4c1;
+    float: right;
+    font-size: 16px;
+}
+#whitepages_verified {
+    width: 170px;
+    background: #ffffff url(../img/whitepages.png) 10px center no-repeat;
+    border: 2px solid #283748;
+    padding: 10px 2px 2px 2px;
+    text-align: right;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.icon_check_gray {
+    width: 22px;
+    height: 16px;
+    background: url(../img/icon_check_gray.png) center top no-repeat;
+    background-size: contain;
+    float: right;
+}
+button.primary {
+    color: #fff;
+    background: #6fc4c1;
+    border: 2px solid #6fc4c1;
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 4px 10px;
+    width: 100%;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+button.secondary {
+    color: #6fc4c1;
+    background: #ffffff;
+    border: 2px solid #6fc4c1;
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 4px 10px;
+    width: 100%;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
-
+#map_root {
+    display: none;
+}
 
 

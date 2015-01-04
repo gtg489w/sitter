@@ -26,12 +26,59 @@ require([
 
 
     sittersLayer.on('click', function(e) {
-        console.log(e.graphic.attributes.sitter_id);
+        if(e.graphic.attributes.sitter_id == 1) {
+            showJeremy();
+        } else {
+            showAmanda();
+        }
         $('#map_profile').fadeIn();
     });
     map.addLayer(sittersLayer);
 
 });
+
+var showJeremy = function() {
+    
+    $.ajax({
+        url: "https://proapi.whitepages.com/2.0/phone.json?phone_number=8643568373&api_key=1178a3b580cea98d66fc73e233f344b3",
+        context: document.body
+    }).success(function(response) {
+        console.log(response);
+    });
+    $('#video-bio').show();
+    $('#value-bio').text("Hi! I'm Jeremy. I look forward to serving you.");
+    $('#value-sits').text('1');
+    $('#value-age').text('37');
+    $('#whitepages_verified').hide();
+    $('#filter-baby').removeClass('unavailable');
+    $('#filter-pet').addClass('unavailable');
+    $('#filter-house').addClass('unavailable');
+    $('#value-name').text('Jeremy L.');
+    $('.profile-photo-round').css('background-image','url(img/jeremy.jpg)');
+    $('.profile-photo-backdrop').css('background-image','url(img/jeremy.jpg)');
+    $('#fifthstar').hide();
+};
+
+var showAmanda = function() {
+    $.ajax({
+        url: "https://proapi.whitepages.com/2.0/phone.json?phone_number=5708671755&api_key=1178a3b580cea98d66fc73e233f344b3",
+        context: document.body
+    }).success(function(response) {
+        console.log(response);
+    });
+    $('#video-bio').hide();
+    $('#value-bio').text("Thanks for visiting my profile! I'm Amanda and I've been a nanny and babysitter for a number of years.");
+    $('#value-sits').text('47');
+    $('#value-age').text('28');
+    $('#whitepages_verified').show();
+    $('#filter-baby').removeClass('unavailable');
+    $('#filter-pet').removeClass('unavailable');
+    $('#filter-house').removeClass('unavailable');
+    $('#value-name').text('Amanda S.');
+    $('.profile-photo-round').css('background-image','url(img/amanda.jpg)');
+    $('.profile-photo-backdrop').css('background-image','url(img/amanda.jpg)');
+    $('#fifthstar').show();
+};
 
 
 // MOBILE APP CODE
