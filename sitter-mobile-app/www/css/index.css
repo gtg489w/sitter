@@ -417,6 +417,14 @@ button.toggle.active div {
     background-size: contain;
     margin: 240px auto 0px auto;
 }
+.receipt_baby {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    margin: auto;
+    background-image: url(../img/icon_baby.png);
+}
+
 
 
 
