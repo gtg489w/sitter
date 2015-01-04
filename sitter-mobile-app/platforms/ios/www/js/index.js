@@ -46,7 +46,7 @@ var showJeremy = function() {
         url: "https://proapi.whitepages.com/2.0/phone.json?phone_number=8643568373&api_key=1178a3b580cea98d66fc73e233f344b3",
         context: document.body
     }).success(function(response) {
-        console.log(response);
+        //console.log(response);
     });
     $('#video-bio').show();
     $('#value-bio').text("Hi! I'm Jeremy. I look forward to serving you.");
@@ -67,7 +67,7 @@ var showAmanda = function() {
         url: "https://proapi.whitepages.com/2.0/phone.json?phone_number=5708671755&api_key=1178a3b580cea98d66fc73e233f344b3",
         context: document.body
     }).success(function(response) {
-        console.log(response);
+        //console.log(response);
     });
     $('#video-bio').hide();
     $('#value-bio').text("Thanks for visiting my profile! I'm Amanda and I've been a nanny and babysitter for a number of years.");
@@ -109,6 +109,39 @@ var app = {
         });
         $('#profile-close').click(function() {
             $('#map_profile').fadeOut();
+        });
+        $('#book-button').click(function() {
+            $('#page_map').hide();
+            $('#page_access').fadeIn();
+        });
+        $('button.toggle').click(function() {
+            if($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $(this).addClass('active');
+            }
+        });
+        $('#button-bookit').click(function() {
+            $('#page_access').hide();
+            $('#page-section-booked').hide();
+            $('#page-section-booking').show();
+            $('#page_booking').show();
+            setTimeout(function() {
+                $('#page-section-booking').hide();
+                $('#page-section-booked').show();
+                setTimeout(function() {
+                    $('#page_booking').hide();
+                    $('#page_receipt').show();
+                }, 3000);
+            }, 3000);
+        });
+        $('#button-close-video').click(function() {
+            $('#map_video_bio').hide();
+            $('#map_profile').show();
+        });
+        $('#video-bio').click(function() {
+            $('#map_profile').hide();
+            $('#map_video_bio').show();
         });
     },
     bindEvents: function() {
