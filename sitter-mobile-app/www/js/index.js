@@ -34,10 +34,22 @@ require([
 
 
 // MOBILE APP CODE
-
+var menuOpen = false;
 var app = {
     initialize: function() {
         this.bindEvents();
+        $('#header_action').click(function() {
+            if(menuOpen) {
+                $('.header_menu').removeClass('open');
+                $('#header_action').removeClass('icon_arrow_up');
+                $('#header_action').addClass('icon_arrow_down');
+            } else {
+                $('.header_menu').addClass('open');
+                $('#header_action').removeClass('icon_arrow_down');
+                $('#header_action').addClass('icon_arrow_up');
+            }
+            menuOpen = !menuOpen;
+        });
     },
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
