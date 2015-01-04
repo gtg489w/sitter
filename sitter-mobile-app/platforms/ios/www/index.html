@@ -12,7 +12,12 @@
     </head>
     <body>
 
-        <div id="page_home" style="display: block;">
+        <div id="page_video">
+            <button class="primary" id="button-video-interview">Video</button>
+             <div id="myPublisherDiv" style="width: 375px; height: 667px; background: #abcdef;"></div>
+        </div>
+
+        <div id="page_home" style="display: none;">
             <div id="logo"></div>
             <table class="button_table">
                 <tr>
@@ -184,9 +189,9 @@
             <p style="color: #fff; text-align: center;">GIVE YOUR SITTER ACCESS TO:</p>
             <div style="padding: 10px;">
                 <button class="toggle active">FRONT DOOR <div></div></button>
-                <button class="toggle active">LIGHTS <div></div></button>
-                <button class="toggle">SECURITY SYSTEM <div></div></button>
-                <button class="toggle">GARAGE <div></div></button>
+                <button class="toggle active">GARAGE DOOR <div></div></button>
+                <button class="toggle active">SECURITY SYSTEM <div></div></button>
+                <button class="toggle">LIGHTS <div></div></button>
 
                 <button class="secondary" id="button-bookit" style="margin-top: 100px; padding: 12px 10px;">COMPLETE BOOKING</button>
             </div>
@@ -234,6 +239,7 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script src="http://js.arcgis.com/3.12/"></script>
+        <script type="text/javascript" src="opentok.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
