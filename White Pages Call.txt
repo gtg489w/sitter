@@ -143,3 +143,120 @@ https://proapi.whitepages.com/2.0/phone.json?phone_number=8643568373&api_key=117
  },
  "messages":[]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+ "results":[
+  "Phone.d6176fef-a2e1-4b08-cfe3-bc7128b6a886.Durable"
+ ],
+ "dictionary":{
+  "Location.98612ab5-8446-495a-956a-d8a8f807105e.Durable":{
+   "id":{
+    "key":"Location.98612ab5-8446-495a-956a-d8a8f807105e.Durable",
+    "url":"https://proapi.whitepages.com/2.0/entity/Location.98612ab5-8446-495a-956a-d8a8f807105e.Durable.json?api_key=1178a3b580cea98d66fc73e233f344b3",
+    "type":"Location",
+    "uuid":"98612ab5-8446-495a-956a-d8a8f807105e",
+    "durability":"Durable"
+   },
+   "type":"ZipPlus4",
+   "valid_for":null,
+   "legal_entities_at":null,
+   "city":"Atlanta",
+   "postal_code":"30326",
+   "zip4":"3317",
+   "state_code":"GA",
+   "country_code":"US",
+   "address":"Kingsboro Rd NE, Atlanta GA 30326-3317",
+   "house":null,
+   "street_name":"Kingsboro",
+   "street_type":"Rd",
+   "pre_dir":null,
+   "post_dir":"NE",
+   "apt_number":null,
+   "apt_type":null,
+   "box_number":null,
+   "is_receiving_mail":null,
+   "not_receiving_mail_reason":null,
+   "usage":null,
+   "delivery_point":null,
+   "box_type":null,
+   "address_type":null,
+   "lat_long":{
+    "latitude":33.849789,
+    "longitude":-84.358168,
+    "accuracy":"Street"
+   },
+   "is_deliverable":null,
+   "standard_address_line1":"Kingsboro Rd NE",
+   "standard_address_line2":"",
+   "standard_address_location":"Atlanta GA 30326-3317"
+  },
+  "Phone.d6176fef-a2e1-4b08-cfe3-bc7128b6a886.Durable":{
+   "id":{
+    "key":"Phone.d6176fef-a2e1-4b08-cfe3-bc7128b6a886.Durable",
+    "url":"https://proapi.whitepages.com/2.0/entity/Phone.d6176fef-a2e1-4b08-cfe3-bc7128b6a886.Durable.json?api_key=1178a3b580cea98d66fc73e233f344b3",
+    "type":"Phone",
+    "uuid":"d6176fef-a2e1-4b08-cfe3-bc7128b6a886",
+    "durability":"Durable"
+   },
+   "line_type":"Mobile",
+   "belongs_to":[],
+   "associated_locations":[
+    {
+     "id":{
+      "key":"Location.98612ab5-8446-495a-956a-d8a8f807105e.Durable",
+      "url":"https://proapi.whitepages.com/2.0/entity/Location.98612ab5-8446-495a-956a-d8a8f807105e.Durable.json?api_key=1178a3b580cea98d66fc73e233f344b3",
+      "type":"Location",
+      "uuid":"98612ab5-8446-495a-956a-d8a8f807105e",
+      "durability":"Durable"
+     },
+     "valid_for":null,
+     "contact_type":null,
+     "contact_creation_date":null
+    }
+   ],
+   "is_valid":true,
+   "phone_number":"5708671755",
+   "country_calling_code":"1",
+   "extension":null,
+   "carrier":"AT&T",
+   "do_not_call":true,
+   "reputation":{
+    "spam_score":0
+   },
+   "is_prepaid":null,
+   "best_location":{
+    "id":{
+     "key":"Location.98612ab5-8446-495a-956a-d8a8f807105e.Durable",
+     "url":"https://proapi.whitepages.com/2.0/entity/Location.98612ab5-8446-495a-956a-d8a8f807105e.Durable.json?api_key=1178a3b580cea98d66fc73e233f344b3",
+     "type":"Location",
+     "uuid":"98612ab5-8446-495a-956a-d8a8f807105e",
+     "durability":"Durable"
+    }
+   }
+  }
+ },
+ "messages":[]
+}

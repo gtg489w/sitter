@@ -25,8 +25,11 @@
 			require([
 				"esri/map",
 				"esri/layers/FeatureLayer",
+				"esri/symbols/PictureMarkerSymbol",
+				"esri/symbols/SimpleFillSymbol",
+				"esri/Color", 
 				"dojo/domReady!",
-				], function(Map, FeatureLayer) {
+				], function(Map, FeatureLayer, PictureMarkerSymbol, SimpleFillSymbol, Color) {
 				map = new Map("map", {
 					basemap: "streets",
 					center: [-115.195684, 36.114539], // longitude, latitude
@@ -37,6 +40,12 @@
 					//infoTemplate: template,
 					outFields: ["*"]
 				});
+
+				//var pictureMarkerSymbol = new PictureMarkerSymbol('http://www.esri.com/graphics/aexicon.jpg', 51, 51);
+				var selectionSymbol = new SimpleFillSymbol().setColor(new Color([255,255,0,0.5]));
+				sittersLayer.setSelectionSymbol(selectionSymbol);
+
+
 				sittersLayer.on('click', function(e) {
 					console.log(e.graphic.attributes.sitter_id);
 				});
