@@ -135,6 +135,14 @@ var app = {
                 }, 3000);
             }, 3000);
         });
+        $('#button-close-video').click(function() {
+            $('#map_video_bio').hide();
+            $('#map_profile').show();
+        });
+        $('#video-bio').click(function() {
+            $('#map_profile').hide();
+            $('#map_video_bio').show();
+        });
     },
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
