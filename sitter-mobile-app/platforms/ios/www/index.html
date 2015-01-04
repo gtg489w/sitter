@@ -37,16 +37,88 @@
 
         <div id="page_map" style="display: block;">
             <div class="header">
-                Filter: Today (6-10pm) <div id="header_action" class="icon_arrow_down"></div>
+                <div class="header_content">
+                    Filter: Today (6-10pm) <div id="header_action" class="icon_arrow_down"></div>
+                </div>
+                <div class="header_menu">
+                    <div class="padding">
+                        <table class="button_table">
+                            <tr>
+                                <td>
+                                    <div class="filter_button btn_baby_blue"></div>
+                                    <hr />
+                                    <div>Baby<br />Sit</div>
+                                </td>
+                                <td>
+                                    <div class="filter_button btn_pet_blue"></div>
+                                    <hr />
+                                    <div>Baby<br />Sit</div>
+                                </td>
+                                <td>
+                                    <div class="filter_button btn_house_blue"></div>
+                                    <hr />
+                                    <div>Baby<br />Sit</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>Date:</td>
+                                <td>Today, January 3, 2015</td>
+                            </tr>
+                            <tr>
+                                <td>Time:</td>
+                                <td>7pm - 10pm</td>
+                            </tr>
+                            <tr>
+                                <td>Rating:</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
             <div id="sitter_map_container">
                 <div id="map"></div>
-                <div id="map_profile"></div>
+                <div id="map_profile" style="display: block;">
+                    <div style="padding: 4px; color: #fff; background: #283748;">Karen H.</div>
+                    <div class="profile">
+                        <div class="profile-photo-backdrop"></div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="profile-photo-round"></div>
+                                </td>
+                                <td>
+                                    Sitters Available Services:
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="profile-deets">
+                            <tr>
+                                <td><h3>15</h3># Of Sits</td>
+                                <td><h3>25</h3>Age</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        Bio:
+                        <p>Bio data goes here</p>
+                    </div>
+                    <div>
+                        <div><button>Video Interview</button></div>
+                        <div><button>Book This Sitter</button></div>
+                        <div><button>Cancel</button></div>
+                    </div>
+                </div>
             </div>
         </div>
 
-
+        
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
         <script src="http://js.arcgis.com/3.12/"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>

@@ -11,8 +11,8 @@ require([
     ], function(Map, FeatureLayer, PictureMarkerSymbol, SimpleFillSymbol, Color) {
     map = new Map("map", {
         basemap: "streets",
-        center: [-115.195684, 36.114539], // longitude, latitude
-        zoom: 15
+        center: [-115.1480962, 36.1714265], // longitude, latitude
+        zoom: 13
     });
 
     var sittersLayer = new FeatureLayer("http://services.arcgis.com/T4ElzZ5y0uIajYQQ/arcgis/rest/services/sitters/FeatureServer/0",{
@@ -27,6 +27,7 @@ require([
 
     sittersLayer.on('click', function(e) {
         console.log(e.graphic.attributes.sitter_id);
+        $('#map_profile').fadeIn();
     });
     map.addLayer(sittersLayer);
 
@@ -38,6 +39,12 @@ var menuOpen = false;
 var app = {
     initialize: function() {
         this.bindEvents();
+        $('#page_home').click(function() {
+            $('#page_home').hide();
+            $('#page_map').css('visibility','visible');
+            $('#map_root').show();
+            $('#page_map').fadeIn();
+        });
         $('#header_action').click(function() {
             if(menuOpen) {
                 $('.header_menu').removeClass('open');
@@ -49,6 +56,9 @@ var app = {
                 $('#header_action').addClass('icon_arrow_up');
             }
             menuOpen = !menuOpen;
+        });
+        $('#profile-close').click(function() {
+            $('#map_profile').fadeOut();
         });
     },
     bindEvents: function() {
