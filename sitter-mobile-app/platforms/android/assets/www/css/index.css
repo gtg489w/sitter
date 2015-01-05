@@ -1,0 +1,448 @@
+@font-face {
+    font-family: "mainfont";
+    src: url("../fonts/TradeGothicLTStd-Cn18.otf") format("opentype");   
+}
+@font-face {
+    font-family: "boldfont";
+    src: url("../fonts/TradeGothicLTStd-BdCn20.otf") format("opentype");   
+}
+@font-face {
+    font-family: "slabs";
+    src: url("../fonts/PatuaOne-Regular.ttf") format("opentype");   
+}
+@font-face {
+    font-family: "script";
+    src: url("../fonts/SignPainter_HouseScript.ttf") format("opentype");   
+}
+
+
+
+
+
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+html, body {
+    height: 100%;
+    font-size: 44px;
+}
+html {
+    background: url(../img/background.png) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family: 'mainfont';
+    /*'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;*/
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+.button_table {
+    width: 100%;
+}
+.button_table td {
+    text-align: center;
+}
+
+
+/********************************************************
+    HOME
+********************************************************/
+
+#logo {
+    width: 500px;
+    height: 300px;
+    background: url(../img/logo.png) center center no-repeat;
+    background-size: contain;
+    margin: 100px auto 0px auto;
+}
+.home_button {
+    width: 160px;
+    height: 160px;
+    background-size: contain;
+    margin: auto;
+}
+#btn_baby {
+    background-image: url(../img/icon_baby.png);
+}
+#btn_pet {
+    background-image: url(../img/icon_pet.png);
+}
+#btn_house {
+    background-image: url(../img/icon_house.png);
+}
+#page_home hr {
+    border-color: #75aed1;
+    margin: 20px 40px 20px 40px;
+}
+#page_home {
+    color: #6fc4c1;
+}
+
+
+
+
+/********************************************************
+    MAP
+********************************************************/
+.header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    min-height: 80px;
+    background: url(../img/header.png) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    -webkit-box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.75);
+    z-index: 1005;
+}
+.header_content {
+    padding: 30px 20px 0px 20px;
+}
+#sitter_map_container {
+    background: #283748;
+    position: absolute;
+    top: 110px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+#map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#map_video_bio {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: #fff;
+    display: block;
+}
+#map_profile {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: #fff;
+    display: none;
+}
+#header_action {
+    width: 64px;
+    height: 64px;
+    float: right;
+    position: relative;
+    top: -8px;
+}
+.icon_arrow_down {
+    background: url(../img/icon_arrow_down.png) center center no-repeat;
+    background-size: contain;
+}
+.icon_arrow_up {
+    background: url(../img/icon_arrow_up.png) center center no-repeat;
+    background-size: contain;
+}
+.header_menu {
+    margin-top: 20px;
+    background: #fff;
+    max-height: 0;
+    overflow: hidden;
+    color: #283748;
+    font-size: 28px;
+
+    /* Set our transitions up. */
+    -webkit-transition: max-height 0.8s;
+    -moz-transition: max-height 0.8s;
+    transition: max-height 0.8s;
+}
+.header_menu.open {
+    max-height: 1000px;
+}
+.filter_selected {
+    position: relative;
+    border: 2px solid #283748;
+    border-radius: 16px;
+    padding: 24px 0px
+}
+.filter_selected_mark {
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    width: 64px;
+    height: 64px;
+    background: url(../img/icon_check_blue.png) center center no-repeat;
+    background-size: contain;
+}
+.filter_button {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    margin: auto;
+}
+.btn_baby_blue {
+    background-image: url(../img/icon_baby_blue.png);
+}
+.btn_pet_blue {
+    background-image: url(../img/icon_pet_blue.png);
+}
+.btn_house_blue {
+    background-image: url(../img/icon_house_blue.png);
+}
+.header_menu .padding {
+    padding: 40px;
+}
+.header_menu hr {
+    margin: 20px 40px 20px 40px;
+    border-color: #283748;
+}
+#additional_filters {
+    font-size: 32px;
+    color: #666666;
+    width: 100%;
+    margin-top: 80px;
+}
+#additional_filters td {
+    padding-top: 24px;
+}
+.input {
+    padding: 16px 40px 12px 40px;
+    /*border: 1px solid #999;*/
+    border-radius: 16px;
+    color: #283748;
+    -webkit-box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
+}
+.icon_calendar {
+    width: 44px;
+    height: 44px;
+    background: url(../img/icon_calendar.png) center center no-repeat;
+    background-size: contain;
+    float: left;
+    position: relative;
+    top: -6px;
+    left: -16px;
+}
+.icon_clock {
+    width: 44px;
+    height: 44px;
+    background: url(../img/icon_time.png) center center no-repeat;
+    background-size: contain;
+    float: left;
+    position: relative;
+    top: -6px;
+    left: -8px;
+}
+.icon_star {
+    width: 80px;
+    height: 80px;
+    background: url(../img/icon_star.png) center center no-repeat;
+    background-size: contain;
+    float: left;
+}
+.icon_star.empty {
+    opacity: .4;
+}
+.profile-photo-round {
+    width: 240px;
+    height: 240px;
+    border: 8px solid #ffffff;
+    border-radius: 120px;
+    background: url(../img/profile.jpg) center center no-repeat;
+    background-size: cover;
+}
+.profile {
+    position: relative;
+}
+.profile-photo-backdrop {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    opacity: .2;
+    background: url(../img/profile.jpg) center center no-repeat;
+    background-size: cover;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+}
+.profile-deets {
+    position: relative;
+    top: -4px;
+    background: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+.profile-deets td {
+    border: 2px solid #e6e6e6;
+    padding: 20px;
+}
+.profile-deets h3 {
+    margin: 0px;
+}
+h4 {
+    margin: 0px;
+    font-size: 32px;
+    color: #808080;
+}
+.unavailable {
+    opacity: .2;
+}
+.profile hr {
+    margin: 20px 16px 20px 16px;
+}
+#video-bio {
+    color: #6fc4c1;
+    float: right;
+    font-size: 32px;
+}
+#whitepages_icon {
+    width: 180px;
+    height: 36px;
+    float: left;
+    background: url(../img/whitepages.png) 10px center no-repeat;
+    background-size: contain;
+}
+#whitepages_verified {
+    width: 280px;
+    background: #ffffff;
+    background-size: contain;
+    border: 4px solid #283748;
+    padding: 4px 4px 4px 4px;
+    text-align: right;
+    border-radius: 8px;
+    font-size: 28px;
+}
+.icon_check_gray {
+    width: 44px;
+    height: 32px;
+    background: url(../img/icon_check_gray.png) center top no-repeat;
+    background-size: contain;
+    float: right;
+}
+button.primary {
+    color: #fff;
+    background: #6fc4c1;
+    border: 4px solid #6fc4c1;
+    border-radius: 8px;
+    margin: 8px 0px;
+    padding: 8px 20px;
+    width: 100%;
+    font-size: 44px;
+    text-transform: uppercase;
+}
+button.secondary {
+    color: #6fc4c1;
+    background: #ffffff;
+    border: 4px solid #6fc4c1;
+    border-radius: 8px;
+    margin: 8px 0px;
+    padding: 8px 20px;
+    width: 100%;
+    font-size: 44px;
+    text-transform: uppercase;
+}
+
+#map_root {
+    display: none;
+}
+
+
+/********************************************************
+    BOOKING
+********************************************************/
+h2 {
+    font-size: 96px;
+    color: #6fc4c1;
+    font-family: 'script';
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    margin: 40px 40px;
+}
+button.toggle {
+    color: #fff;
+    background: rgba(111,196, 193, .2);
+    border: 0px;
+    border-radius: 8px;
+    margin: 8px 0px;
+    padding: 24px 20px;
+    width: 100%;
+    font-size: 44px;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 60px;
+}
+button.toggle div {
+    display: none;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: -24px;
+    right: -8px;
+    background: url(../img/icon_check_white.png) center center no-repeat;
+    background-size: contain;
+}
+button.toggle.active {
+    background: rgba(111,196, 193, 1);
+}
+button.toggle.active div {
+    display: block;
+}
+#icon_success {
+    width: 280px;
+    height: 280px;
+    background: url(../img/icon_check.png) center center no-repeat;
+    background-size: contain;
+    margin: 200px auto 0px auto;
+}
+#icon_loading {
+    width: 128px;
+    height: 128px;
+    background: url(../img/loading.gif) center center no-repeat;
+    background-size: contain;
+    margin: 480px auto 0px auto;
+}
+.receipt_baby {
+    width: 160px;
+    height: 160px;
+    background-size: contain;
+    margin: auto;
+    background-image: url(../img/icon_baby.png);
+}
+
+
+
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="http://js.arcgis.com/3.12/esri/css/esri.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Sitter</title>
+    </head>
+    <body>
+
+        <div id="page_home" style="display: block;">
+            <div id="logo"></div>
+            <table class="button_table">
+                <tr>
+                    <td>
+                        <div id="btn_baby" class="home_button"></div>
+                        <hr />
+                        <div>Baby<br />Sit</div>
+                    </td>
+                    <td>
+                        <div id="btn_pet" class="home_button"></div>
+                        <hr />
+                        <div>Pet<br />Sit</div>
+                    </td>
+                    <td>
+                        <div id="btn_house" class="home_button"></div>
+                        <hr />
+                        <div>House<br />Sit</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="page_map" style="visibility: hidden;">
+            <div class="header">
+                <div class="header_content">
+                    Filter: Today (6-10pm) <div id="header_action" class="icon_arrow_down"></div>
+                </div>
+                <div class="header_menu">
+                    <div class="padding">
+                        <table class="button_table">
+                            <tr>
+                                <td class="filter_selected">
+                                    <div class="filter_selected_mark"></div>
+                                    <div class="filter_button btn_baby_blue"></div>
+                                    <hr />
+                                    <div>Baby<br />Sit</div>
+                                </td>
+                                <td>
+                                    <div class="filter_button btn_pet_blue"></div>
+                                    <hr />
+                                    <div>Baby<br />Sit</div>
+                                </td>
+                                <td>
+                                    <div class="filter_button btn_house_blue"></div>
+                                    <hr />
+                                    <div>Baby<br />Sit</div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="additional_filters">
+                            <tr>
+                                <td>Date:</td>
+                                <td>
+                                    <div class="input"><div class="icon_calendar"></div> Today, January 3, 2015</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Time:</td>
+                                <td>
+                                    <div class="input"><div class="icon_clock"></div> 6pm - 10pm</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rating:</td>
+                                <td>
+                                    <div class="icon_star"></div>
+                                    <div class="icon_star"></div>
+                                    <div class="icon_star"></div>
+                                    <div class="icon_star"></div>
+                                    <div class="icon_star empty"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="sitter_map_container">
+                <div id="map"></div>
+                <div id="map_video_bio" style="display: none;">
+                    <div style="padding: 16px 12px 12px 12px; color: #fff; background: #283748;">
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="value-name">Amanda S.</div>
+                    </div>
+                    <div style="padding: 20px;">
+                        Amanda's Video Bio
+                    </div>
+                    <!--video width="670" height="600" controls style="margin: auto; position: relative; left: 4px;">
+                        <source src="http://s3-amazonaws-com.webces.datami.net/2015atthackathon/jerbio.mp4" type="video/mp4">
+                    </video-->
+                    <video width="670" height="600" id="localvideo" controls style="margin: auto; position: relative; left: 4px;"></video>
+                    <div>
+                        <img width="600" src="http://s3-amazonaws-com.webces.datami.net/sdmsg/nonsponsored/msg.png">
+                    </div>
+                    <div style="padding: 20px;">
+                        <button class="primary" id="button-close-video">CLOSE</button>
+                    </div>
+                </div>
+                <div id="map_profile">
+                    <div style="padding: 16px 12px 12px 12px; color: #fff; background: #283748;">
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="icon_star jeremystar" style="float: right; height: 48px;"></div>
+                        <div class="icon_star jeremystar" style="float: right; height: 48px;"></div>
+                        <div class="icon_star jeremystar" style="float: right; height: 48px;"></div>
+                        <div class="icon_star jeremystar" style="float: right; height: 48px;"></div>
+                        <div class="value-name">Karen H.</div>
+                    </div>
+                    <div class="profile">
+                        <div class="profile-photo-backdrop"></div>
+                        <table style="width: 100%; padding: 20px;">
+                            <tr>
+                                <td>
+                                    <div class="profile-photo-round"></div>
+                                </td>
+                                <td style="color: #808080; text-transform: uppercase; font-size: 32px; text-align; center;">
+                                    <div>Sitter's Available Services:</div>
+                                    <table class="button_table">
+                                        <tr>
+                                            <td id="filter-baby">
+                                                <div class="filter_button btn_baby_blue"></div>
+                                                <hr />
+                                            </td>
+                                            <td id="filter-pet" class="unavailable">
+                                                <div class="filter_button btn_pet_blue"></div>
+                                                <hr />
+                                            </td>
+                                            <td id="filter-house">
+                                                <div class="filter_button btn_house_blue"></div>
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div id="whitepages_verified">
+                                        <div id="whitepages_icon"></div>
+                                        <span style="position: relative; top: 6px; left: -8px;">Verified</span> <!--div class="icon_check_gray"></div-->
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="profile-deets">
+                            <tr>
+                                <td>
+                                    <h3 id="value-sits">15</h3>
+                                    <h4># Of Sits</h4>
+                                </td>
+                                <td>
+                                    <h3 id="value-age">25</h3>
+                                    <h4>Age</h4>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="padding: 20px;">
+                        <div id="video-bio">WATCH VIDEO BIO</div>
+                        <h4>BIO:</h4>
+                        <p id="value-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae urna a justo efficitur pretium.</p>
+                        <div><button class="primary" id="button-video-interview">Video Interview</button></div>
+                        <div><button id="book-button" class="primary">Book This Sitter</button></div>
+                        <div><button id="profile-close" class="secondary">Cancel</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page_access" style="display: none;">
+            <h2>One Last Step...</h2>
+            <p style="color: #fff; text-align: center;">GIVE YOUR SITTER ACCESS TO:</p>
+            <div style="padding: 20px;">
+                <button class="toggle">FRONT DOOR <div></div></button>
+                <button class="toggle">GARAGE DOOR <div></div></button>
+                <button class="toggle">SECURITY SYSTEM <div></div></button>
+                <button class="toggle">LIGHTS <div></div></button>
+
+                <button class="secondary" id="button-bookit" style="margin-top: 100px; padding: 24px 20px;">COMPLETE BOOKING</button>
+            </div>
+        </div>
+
+        <div id="page_booking" style="display: none;">
+            <div id="page-section-booking">
+                <div id="icon_loading"></div>
+            </div>
+            <div id="page-section-booked">
+                <div id="icon_success"></div>
+                <h2 style="border: 0px;">Your Sitter is Booked!</h2>
+            </div>
+        </div>
+
+        <div id="page_receipt" style="display: none;">
+            <h2>Receipt</h2>
+            <table style="margin-top: 80px; margin-bottom: 120px;">
+                <tr>
+                    <td>
+                        <div class="receipt_baby"></div>
+                    </td>
+                    <td>
+                        <div style="color: #fff; font-size: 64px;">Baby Sitter: 4 hours</div>
+                        <div style="color: #909090; font-size: 32px;">6pm - 10pm on January 4, 2015</div>
+                    </td>
+                </tr>
+            </table>
+            <div style="color: #fff; font-size: 200px; text-align: center; border-bottom: 2px solid #fff; padding-bottom: 40px; margin: 0px 40px;">
+                $40
+            </div>
+            <div style="margin: 80px 60px 0px 60px;">
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px;"></div>
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px;"></div>
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px;"></div>
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px;"></div>
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px; opacity: .2;"></div>
+            </div>
+            <div style="clear: both; font-size: 32px; color: #909090; text-align: center; padding-top: 40px;">
+                RATE YOUR SITTER
+            </div>
+        </div>
+
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="http://js.arcgis.com/3.12/"></script>
+        <script type="text/javascript" src="opentok.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
