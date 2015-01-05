@@ -12,12 +12,7 @@
     </head>
     <body>
 
-        <div id="page_video">
-            <button class="primary" id="button-video-interview">Video</button>
-             <div id="myPublisherDiv" style="width: 375px; height: 667px; background: #abcdef;"></div>
-        </div>
-
-        <div id="page_home" style="display: none;">
+        <div id="page_home" style="display: block;">
             <div id="logo"></div>
             <table class="button_table">
                 <tr>
@@ -29,12 +24,12 @@
                     <td>
                         <div id="btn_pet" class="home_button"></div>
                         <hr />
-                        <div>Baby<br />Sit</div>
+                        <div>Pet<br />Sit</div>
                     </td>
                     <td>
                         <div id="btn_house" class="home_button"></div>
                         <hr />
-                        <div>Baby<br />Sit</div>
+                        <div>House<br />Sit</div>
                     </td>
                 </tr>
             </table>
@@ -97,43 +92,44 @@
             <div id="sitter_map_container">
                 <div id="map"></div>
                 <div id="map_video_bio" style="display: none;">
-                    <div style="padding: 8px 6px 6px 6px; color: #fff; background: #283748;">
-                        <div class="icon_star" style="float: right; height: 24px;"></div>
-                        <div class="icon_star" style="float: right; height: 24px;"></div>
-                        <div class="icon_star" style="float: right; height: 24px;"></div>
-                        <div class="icon_star" style="float: right; height: 24px;"></div>
-                        <div id="value-name">Jeremy L.</div>
+                    <div style="padding: 16px 12px 12px 12px; color: #fff; background: #283748;">
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="value-name">Amanda S.</div>
                     </div>
-                    <div style="padding: 10px;">
-                        Jeremy's Video Bio
+                    <div style="padding: 20px;">
+                        Amanda's Video Bio
                     </div>
-                    <video width="355" height="200" controls>
-                        <source src="http://s3-amazonaws-com.webces.datami.net/2015atthackathon/VIDEO0040.mp4" type="video/mp4">
-                    </video>
+                    <!--video width="670" height="600" controls style="margin: auto; position: relative; left: 4px;">
+                        <source src="http://s3-amazonaws-com.webces.datami.net/2015atthackathon/jerbio.mp4" type="video/mp4">
+                    </video-->
+                    <video width="670" height="600" id="localvideo" controls style="margin: auto; position: relative; left: 4px;"></video>
                     <div>
-                        <img width="355" src="http://s3-amazonaws-com.webces.datami.net/sdmsg/nonsponsored/msg.png">
+                        <img width="600" src="http://s3-amazonaws-com.webces.datami.net/sdmsg/nonsponsored/msg.png">
                     </div>
-                    <div style="padding: 10px;">
+                    <div style="padding: 20px;">
                         <button class="primary" id="button-close-video">CLOSE</button>
                     </div>
                 </div>
                 <div id="map_profile">
-                    <div style="padding: 8px 6px 6px 6px; color: #fff; background: #283748;">
-                        <div class="icon_star" style="float: right; height: 24px;"></div>
-                        <div class="icon_star" style="float: right; height: 24px;"></div>
-                        <div class="icon_star" style="float: right; height: 24px;"></div>
-                        <div class="icon_star" style="float: right; height: 24px;"></div>
-                        <div class="icon_star" id="fifthstar" style="float: right; height: 24px;"></div>
-                        <div id="value-name">Karen H.</div>
+                    <div style="padding: 16px 12px 12px 12px; color: #fff; background: #283748;">
+                        <div class="icon_star" style="float: right; height: 48px;"></div>
+                        <div class="icon_star jeremystar" style="float: right; height: 48px;"></div>
+                        <div class="icon_star jeremystar" style="float: right; height: 48px;"></div>
+                        <div class="icon_star jeremystar" style="float: right; height: 48px;"></div>
+                        <div class="icon_star jeremystar" style="float: right; height: 48px;"></div>
+                        <div class="value-name">Karen H.</div>
                     </div>
                     <div class="profile">
                         <div class="profile-photo-backdrop"></div>
-                        <table style="width: 100%; padding: 10px;">
+                        <table style="width: 100%; padding: 20px;">
                             <tr>
                                 <td>
                                     <div class="profile-photo-round"></div>
                                 </td>
-                                <td style="color: #808080; text-transform: uppercase; font-size: 16px; text-align; center;">
+                                <td style="color: #808080; text-transform: uppercase; font-size: 32px; text-align; center;">
                                     <div>Sitter's Available Services:</div>
                                     <table class="button_table">
                                         <tr>
@@ -152,7 +148,8 @@
                                         </tr>
                                     </table>
                                     <div id="whitepages_verified">
-                                        Verified <div class="icon_check_gray"></div>
+                                        <div id="whitepages_icon"></div>
+                                        <span style="position: relative; top: 6px; left: -8px;">Verified</span> <!--div class="icon_check_gray"></div-->
                                     </div>
                                 </td>
                             </tr>
@@ -172,11 +169,11 @@
                             </tr>
                         </table>
                     </div>
-                    <div style="padding: 10px;">
+                    <div style="padding: 20px;">
                         <div id="video-bio">WATCH VIDEO BIO</div>
                         <h4>BIO:</h4>
                         <p id="value-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae urna a justo efficitur pretium.</p>
-                        <div><button class="primary">Video Interview</button></div>
+                        <div><button class="primary" id="button-video-interview">Video Interview</button></div>
                         <div><button id="book-button" class="primary">Book This Sitter</button></div>
                         <div><button id="profile-close" class="secondary">Cancel</button></div>
                     </div>
@@ -187,13 +184,13 @@
         <div id="page_access" style="display: none;">
             <h2>One Last Step...</h2>
             <p style="color: #fff; text-align: center;">GIVE YOUR SITTER ACCESS TO:</p>
-            <div style="padding: 10px;">
-                <button class="toggle active">FRONT DOOR <div></div></button>
-                <button class="toggle active">GARAGE DOOR <div></div></button>
-                <button class="toggle active">SECURITY SYSTEM <div></div></button>
+            <div style="padding: 20px;">
+                <button class="toggle">FRONT DOOR <div></div></button>
+                <button class="toggle">GARAGE DOOR <div></div></button>
+                <button class="toggle">SECURITY SYSTEM <div></div></button>
                 <button class="toggle">LIGHTS <div></div></button>
 
-                <button class="secondary" id="button-bookit" style="margin-top: 100px; padding: 12px 10px;">COMPLETE BOOKING</button>
+                <button class="secondary" id="button-bookit" style="margin-top: 100px; padding: 24px 20px;">COMPLETE BOOKING</button>
             </div>
         </div>
 
@@ -209,28 +206,28 @@
 
         <div id="page_receipt" style="display: none;">
             <h2>Receipt</h2>
-            <table style="margin-top: 40px; margin-bottom: 60px;">
+            <table style="margin-top: 80px; margin-bottom: 120px;">
                 <tr>
                     <td>
                         <div class="receipt_baby"></div>
                     </td>
                     <td>
-                        <div style="color: #fff; font-size: 32px;">Baby Sitter: 4 hours</div>
-                        <div style="color: #909090; font-size: 16px;">6pm - 10pm on January 4, 2015</div>
+                        <div style="color: #fff; font-size: 64px;">Baby Sitter: 4 hours</div>
+                        <div style="color: #909090; font-size: 32px;">6pm - 10pm on January 4, 2015</div>
                     </td>
                 </tr>
             </table>
-            <div style="color: #fff; font-size: 100px; text-align: center; border-bottom: 1px solid #fff; padding-bottom: 20px; margin: 0px 20px;">
+            <div style="color: #fff; font-size: 200px; text-align: center; border-bottom: 2px solid #fff; padding-bottom: 40px; margin: 0px 40px;">
                 $40
             </div>
-            <div style="margin: 40px 30px 0px 30px;">
-                <div class="icon_star" style="float: left; height: 50px; margin: 0px 10px;"></div>
-                <div class="icon_star" style="float: left; height: 50px; margin: 0px 10px;"></div>
-                <div class="icon_star" style="float: left; height: 50px; margin: 0px 10px;"></div>
-                <div class="icon_star" style="float: left; height: 50px; margin: 0px 10px;"></div>
-                <div class="icon_star" style="float: left; height: 50px; margin: 0px 10px; opacity: .2;"></div>
+            <div style="margin: 80px 60px 0px 60px;">
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px;"></div>
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px;"></div>
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px;"></div>
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px;"></div>
+                <div class="icon_star" style="float: left; height: 100px; margin: 0px 20px; opacity: .2;"></div>
             </div>
-            <div style="clear: both; font-size: 16px; color: #909090; text-align: center; padding-top: 20px;">
+            <div style="clear: both; font-size: 32px; color: #909090; text-align: center; padding-top: 40px;">
                 RATE YOUR SITTER
             </div>
         </div>

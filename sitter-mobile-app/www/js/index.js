@@ -48,7 +48,7 @@ var showJeremy = function() {
 	}).success(function(response) {
 		//console.log(response);
 	});
-	$('#video-bio').show();
+	$('#video-bio').hide();
 	$('#value-bio').text("Hi! I'm Jeremy. I look forward to serving you.");
 	$('#value-sits').text('1');
 	$('#value-age').text('37');
@@ -56,10 +56,10 @@ var showJeremy = function() {
 	$('#filter-baby').removeClass('unavailable');
 	$('#filter-pet').addClass('unavailable');
 	$('#filter-house').addClass('unavailable');
-	$('#value-name').text('Jeremy L.');
+	$('.value-name').text('Jeremy L.');
 	$('.profile-photo-round').css('background-image','url(img/jeremy.jpg)');
 	$('.profile-photo-backdrop').css('background-image','url(img/jeremy.jpg)');
-	$('#fifthstar').hide();
+	$('.jeremystar').hide();
 };
 
 var showAmanda = function() {
@@ -69,7 +69,7 @@ var showAmanda = function() {
 	}).success(function(response) {
 		//console.log(response);
 	});
-	$('#video-bio').hide();
+	$('#video-bio').show();
 	$('#value-bio').text("Thanks for visiting my profile! I'm Amanda and I've been a nanny and babysitter for a number of years.");
 	$('#value-sits').text('47');
 	$('#value-age').text('28');
@@ -77,17 +77,17 @@ var showAmanda = function() {
 	$('#filter-baby').removeClass('unavailable');
 	$('#filter-pet').removeClass('unavailable');
 	$('#filter-house').removeClass('unavailable');
-	$('#value-name').text('Amanda S.');
+	$('.value-name').text('Amanda S.');
 	$('.profile-photo-round').css('background-image','url(img/amanda.jpg)');
 	$('.profile-photo-backdrop').css('background-image','url(img/amanda.jpg)');
-	$('#fifthstar').show();
+	$('.jeremystar').show();
 };
 
 
 // WEBRTC
 
 var openVideoChat = function() {
-	var xmlhttp=new XMLHttpRequest();
+	/*var xmlhttp=new XMLHttpRequest();
 	xmlhttp.open("GET", "https://opentokrtc.com/cordova.json", false);
 	xmlhttp.send();
 	var data = JSON.parse( xmlhttp.response );
@@ -106,6 +106,13 @@ var openVideoChat = function() {
 	});
 	session.connect(data.token, function(){
 		session.publish( publisher );
+	});*/
+
+	navigator.startApp.start("com.android.chrome", function(message) {
+	    //alert(message);
+	}, 
+	function(error) {
+	    //alert('ERROR Launching Interview');
 	});
 };
 
@@ -171,6 +178,13 @@ var app = {
 			$('#map_profile').hide();
 			$('#map_video_bio').show();
 		});
+
+		
+		window.plugins.html5Video.initialize({
+			"localvideo" : "sitterVideo.mp4"
+		});
+
+
 	},
 	bindEvents: function() {
 		document.addEventListener('deviceready', this.onDeviceReady, false);

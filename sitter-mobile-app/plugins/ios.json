@@ -117,6 +117,14 @@
                         {
                             "xml": "<access origin=\"*\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"startApp\"><param name=\"ios-package\" value=\"startApp\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -126,7 +134,17 @@
     "installed_plugins": {
         "com.tokbox.cordova.opentok": {
             "PACKAGE_NAME": "com.atthackathon.sitter"
+        },
+        "org.apache.cordova.startapp": {
+            "PACKAGE_NAME": "com.atthackathon.sitter"
+        },
+        "jaeger.Html5Video": {
+            "PACKAGE_NAME": "com.atthackathon.sitter"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.atthackathon.sitter"
+        }
+    }
 }

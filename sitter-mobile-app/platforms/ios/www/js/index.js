@@ -56,7 +56,7 @@ var showJeremy = function() {
 	$('#filter-baby').removeClass('unavailable');
 	$('#filter-pet').addClass('unavailable');
 	$('#filter-house').addClass('unavailable');
-	$('#value-name').text('Jeremy L.');
+	$('.value-name').text('Jeremy L.');
 	$('.profile-photo-round').css('background-image','url(img/jeremy.jpg)');
 	$('.profile-photo-backdrop').css('background-image','url(img/jeremy.jpg)');
 	$('#fifthstar').hide();
@@ -77,7 +77,7 @@ var showAmanda = function() {
 	$('#filter-baby').removeClass('unavailable');
 	$('#filter-pet').removeClass('unavailable');
 	$('#filter-house').removeClass('unavailable');
-	$('#value-name').text('Amanda S.');
+	$('.value-name').text('Amanda S.');
 	$('.profile-photo-round').css('background-image','url(img/amanda.jpg)');
 	$('.profile-photo-backdrop').css('background-image','url(img/amanda.jpg)');
 	$('#fifthstar').show();
@@ -87,7 +87,7 @@ var showAmanda = function() {
 // WEBRTC
 
 var openVideoChat = function() {
-	var xmlhttp=new XMLHttpRequest();
+	/*var xmlhttp=new XMLHttpRequest();
 	xmlhttp.open("GET", "https://opentokrtc.com/cordova.json", false);
 	xmlhttp.send();
 	var data = JSON.parse( xmlhttp.response );
@@ -106,6 +106,13 @@ var openVideoChat = function() {
 	});
 	session.connect(data.token, function(){
 		session.publish( publisher );
+	});*/
+
+	navigator.startApp.start("com.android.chrome", function(message) {
+	    //alert(message);
+	}, 
+	function(error) {
+	    //alert('ERROR Launching Interview');
 	});
 };
 

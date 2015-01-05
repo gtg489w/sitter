@@ -41,6 +41,8 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		4B9A39410A554F769BC38200 /* Opentok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EAD40E30CF4324936598EA /* Opentok.framework */; };
 		82CD6A7FF91F41759D757CBC /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D31C91DE21244C9A47E7643 /* libstdc++.6.0.9.dylib */; };
+		3C1AD20C5A1B415A9A076347 /* startApp.m in Sources */ = {isa = PBXBuildFile; fileRef = E2912660C4C9478287DCCCBA /* startApp.m */; };
+		8AC6818C6B55469D8C9A4C82 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EABEA88AA694E2DB52E5A56 /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,10 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Sitter/config.xml; sourceTree = "<group>"; };
 		E9EAD40E30CF4324936598EA /* Opentok.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Opentok.framework"; path = "Sitter/Plugins/com.tokbox.cordova.opentok/Opentok.framework"; sourceTree = "<group>"; };
 		7D31C91DE21244C9A47E7643 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		E2912660C4C9478287DCCCBA /* startApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "startApp.m"; path = "org.apache.cordova.startapp/startApp.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		D44C81F6A37C4E78A4803C2E /* startApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "startApp.h"; path = "org.apache.cordova.startapp/startApp.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		2EABEA88AA694E2DB52E5A56 /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		3527E2B8A13249BFAA9DA5EB /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,10 @@
 			children = (
 				CFD4084F1A59638A001778F8 /* OpenTokPlugin.h */,
 				CFD408501A59638A001778F8 /* OpenTokPlugin.m */,
+				E2912660C4C9478287DCCCBA /* startApp.m */,
+				D44C81F6A37C4E78A4803C2E /* startApp.h */,
+				2EABEA88AA694E2DB52E5A56 /* CDVDevice.m */,
+				3527E2B8A13249BFAA9DA5EB /* CDVDevice.h */,
 			);
 			name = Plugins;
 			path = Sitter/Plugins;
@@ -426,6 +436,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				3C1AD20C5A1B415A9A076347 /* startApp.m in Sources */,
+				8AC6818C6B55469D8C9A4C82 /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

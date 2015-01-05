@@ -25,7 +25,7 @@
 }
 html, body {
     height: 100%;
-    font-size: 22px;
+    font-size: 44px;
 }
 html {
     background: url(../img/background.png) center center no-repeat;
@@ -70,15 +70,15 @@ body {
 ********************************************************/
 
 #logo {
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    height: 300px;
     background: url(../img/logo.png) center center no-repeat;
     background-size: contain;
     margin: 100px auto 0px auto;
 }
 .home_button {
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 160px;
     background-size: contain;
     margin: auto;
 }
@@ -93,7 +93,7 @@ body {
 }
 #page_home hr {
     border-color: #75aed1;
-    margin: 10px 20px 10px 20px;
+    margin: 20px 40px 20px 40px;
 }
 #page_home {
     color: #6fc4c1;
@@ -110,22 +110,22 @@ body {
     top: 0px;
     left: 0px;
     right: 0px;
-    min-height: 40px;
+    min-height: 80px;
     background: url(../img/header.png) center center no-repeat;
     background-size: cover;
     color: #fff;
-    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.75);
     z-index: 1005;
 }
 .header_content {
-    padding: 40px 10px 0px 10px;
+    padding: 30px 20px 0px 20px;
 }
 #sitter_map_container {
     background: #283748;
     position: absolute;
-    top: 80px;
+    top: 110px;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -139,29 +139,29 @@ body {
 #map_video_bio {
     position: absolute;
     z-index: 1000;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     background: #fff;
     display: block;
 }
 #map_profile {
     position: absolute;
     z-index: 1000;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     background: #fff;
     display: none;
 }
 #header_action {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     float: right;
     position: relative;
-    top: -4px;
+    top: -8px;
 }
 .icon_arrow_down {
     background: url(../img/icon_arrow_down.png) center center no-repeat;
@@ -172,12 +172,12 @@ body {
     background-size: contain;
 }
 .header_menu {
-    margin-top: 10px;
+    margin-top: 20px;
     background: #fff;
     max-height: 0;
     overflow: hidden;
     color: #283748;
-    font-size: 14px;
+    font-size: 28px;
 
     /* Set our transitions up. */
     -webkit-transition: max-height 0.8s;
@@ -185,26 +185,26 @@ body {
     transition: max-height 0.8s;
 }
 .header_menu.open {
-    max-height: 500px;
+    max-height: 1000px;
 }
 .filter_selected {
     position: relative;
-    border: 1px solid #283748;
-    border-radius: 8px;
-    padding: 12px 0px
+    border: 2px solid #283748;
+    border-radius: 16px;
+    padding: 24px 0px
 }
 .filter_selected_mark {
     position: absolute;
-    top: -12px;
-    right: -12px;
-    width: 32px;
-    height: 32px;
+    top: -24px;
+    right: -24px;
+    width: 64px;
+    height: 64px;
     background: url(../img/icon_check_blue.png) center center no-repeat;
     background-size: contain;
 }
 .filter_button {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background-size: contain;
     margin: auto;
 }
@@ -218,53 +218,53 @@ body {
     background-image: url(../img/icon_house_blue.png);
 }
 .header_menu .padding {
-    padding: 20px;
+    padding: 40px;
 }
 .header_menu hr {
-    margin: 10px 20px 10px 20px;
+    margin: 20px 40px 20px 40px;
     border-color: #283748;
 }
 #additional_filters {
-    font-size: 16px;
+    font-size: 32px;
     color: #666666;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 #additional_filters td {
-    padding-top: 12px;
+    padding-top: 24px;
 }
 .input {
-    padding: 8px 20px 6px 20px;
+    padding: 16px 40px 12px 40px;
     /*border: 1px solid #999;*/
-    border-radius: 8px;
+    border-radius: 16px;
     color: #283748;
-    -webkit-box-shadow: inset 0px 0px 5px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 0px 0px 5px -1px rgba(0,0,0,0.75);
-    box-shadow: inset 0px 0px 5px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 10px -2px rgba(0,0,0,0.75);
 }
 .icon_calendar {
-    width: 22px;
-    height: 22px;
+    width: 44px;
+    height: 44px;
     background: url(../img/icon_calendar.png) center center no-repeat;
     background-size: contain;
     float: left;
     position: relative;
-    top: -3px;
-    left: -8px;
+    top: -6px;
+    left: -16px;
 }
 .icon_clock {
-    width: 22px;
-    height: 22px;
+    width: 44px;
+    height: 44px;
     background: url(../img/icon_time.png) center center no-repeat;
     background-size: contain;
     float: left;
     position: relative;
-    top: -3px;
+    top: -6px;
     left: -8px;
 }
 .icon_star {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     background: url(../img/icon_star.png) center center no-repeat;
     background-size: contain;
     float: left;
@@ -273,10 +273,10 @@ body {
     opacity: .4;
 }
 .profile-photo-round {
-    width: 120px;
-    height: 120px;
-    border: 4px solid #ffffff;
-    border-radius: 60px;
+    width: 240px;
+    height: 240px;
+    border: 8px solid #ffffff;
+    border-radius: 120px;
     background: url(../img/profile.jpg) center center no-repeat;
     background-size: cover;
 }
@@ -293,54 +293,62 @@ body {
     opacity: .2;
     background: url(../img/profile.jpg) center center no-repeat;
     background-size: cover;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
 }
 .profile-deets {
     position: relative;
-    top: -2px;
+    top: -4px;
     background: #fff;
     border-collapse: collapse;
     width: 100%;
 }
 .profile-deets td {
-    border: 1px solid #e6e6e6;
-    padding: 10px;
+    border: 2px solid #e6e6e6;
+    padding: 20px;
 }
 .profile-deets h3 {
     margin: 0px;
 }
 h4 {
     margin: 0px;
-    font-size: 16px;
+    font-size: 32px;
     color: #808080;
 }
 .unavailable {
     opacity: .2;
 }
 .profile hr {
-    margin: 10px 8px 10px 8px;
+    margin: 20px 16px 20px 16px;
 }
 #video-bio {
     color: #6fc4c1;
     float: right;
-    font-size: 16px;
+    font-size: 32px;
+}
+#whitepages_icon {
+    width: 180px;
+    height: 36px;
+    float: left;
+    background: url(../img/whitepages.png) 10px center no-repeat;
+    background-size: contain;
 }
 #whitepages_verified {
-    width: 170px;
-    background: #ffffff url(../img/whitepages.png) 10px center no-repeat;
-    border: 2px solid #283748;
-    padding: 10px 2px 2px 2px;
+    width: 280px;
+    background: #ffffff;
+    background-size: contain;
+    border: 4px solid #283748;
+    padding: 4px 4px 4px 4px;
     text-align: right;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 28px;
 }
 .icon_check_gray {
-    width: 22px;
-    height: 16px;
+    width: 44px;
+    height: 32px;
     background: url(../img/icon_check_gray.png) center top no-repeat;
     background-size: contain;
     float: right;
@@ -348,23 +356,23 @@ h4 {
 button.primary {
     color: #fff;
     background: #6fc4c1;
-    border: 2px solid #6fc4c1;
-    border-radius: 4px;
-    margin: 4px 0px;
-    padding: 4px 10px;
+    border: 4px solid #6fc4c1;
+    border-radius: 8px;
+    margin: 8px 0px;
+    padding: 8px 20px;
     width: 100%;
-    font-size: 22px;
+    font-size: 44px;
     text-transform: uppercase;
 }
 button.secondary {
     color: #6fc4c1;
     background: #ffffff;
-    border: 2px solid #6fc4c1;
-    border-radius: 4px;
-    margin: 4px 0px;
-    padding: 4px 10px;
+    border: 4px solid #6fc4c1;
+    border-radius: 8px;
+    margin: 8px 0px;
+    padding: 8px 20px;
     width: 100%;
-    font-size: 22px;
+    font-size: 44px;
     text-transform: uppercase;
 }
 
@@ -377,33 +385,33 @@ button.secondary {
     BOOKING
 ********************************************************/
 h2 {
-    font-size: 48px;
+    font-size: 96px;
     color: #6fc4c1;
     font-family: 'script';
     text-align: center;
-    border-bottom: 1px solid #fff;
-    margin: 20px 20px;
+    border-bottom: 2px solid #fff;
+    margin: 40px 40px;
 }
 button.toggle {
     color: #fff;
     background: rgba(111,196, 193, .2);
     border: 0px;
-    border-radius: 4px;
-    margin: 4px 0px;
-    padding: 12px 10px;
+    border-radius: 8px;
+    margin: 8px 0px;
+    padding: 24px 20px;
     width: 100%;
-    font-size: 22px;
+    font-size: 44px;
     text-transform: uppercase;
     position: relative;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 button.toggle div {
     display: none;
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     position: absolute;
-    top: -12px;
-    right: -4px;
+    top: -24px;
+    right: -8px;
     background: url(../img/icon_check_white.png) center center no-repeat;
     background-size: contain;
 }
@@ -414,22 +422,22 @@ button.toggle.active div {
     display: block;
 }
 #icon_success {
-    width: 140px;
-    height: 140px;
+    width: 280px;
+    height: 280px;
     background: url(../img/icon_check.png) center center no-repeat;
     background-size: contain;
-    margin: 100px auto 0px auto;
+    margin: 200px auto 0px auto;
 }
 #icon_loading {
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     background: url(../img/loading.gif) center center no-repeat;
     background-size: contain;
-    margin: 240px auto 0px auto;
+    margin: 480px auto 0px auto;
 }
 .receipt_baby {
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 160px;
     background-size: contain;
     margin: auto;
     background-image: url(../img/icon_baby.png);
