@@ -12,6 +12,7 @@
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/res/drawable-port-mdpi/screen.png \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/res/drawable-port-xhdpi/screen.png \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/res/drawable-xhdpi/icon.png \
+/Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/res/raw/amanda.mp4 \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/res/values/strings.xml \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/res/xml/config.xml \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/ant-build/res/drawable/icon.png \
@@ -79,6 +80,6 @@
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/assets/www/plugins/org.apache.cordova.startapp/www \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/assets/www/plugins/org.apache.cordova.startapp/www/startApp.js \
+/Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/assets/www/video/amanda.mp4 \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/assets/www/video/jerbio.mp4 \
-/Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/assets/www/video/sitterVideo.mp4 \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/ant-build/AndroidManifest.xml \

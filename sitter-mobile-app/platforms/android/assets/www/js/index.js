@@ -177,13 +177,8 @@ var app = {
 		$('#video-bio').click(function() {
 			$('#map_profile').hide();
 			$('#map_video_bio').show();
+			
 		});
-
-		
-		window.plugins.html5Video.initialize({
-			"localvideo" : "sitterVideo.mp4"
-		});
-
 
 	},
 	bindEvents: function() {

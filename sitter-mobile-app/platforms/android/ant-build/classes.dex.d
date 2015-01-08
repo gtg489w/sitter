@@ -3,6 +3,7 @@
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/ant-build/classes/com/atthackathon/sitter/CordovaApp.class \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/ant-build/classes/com/atthackathon/sitter/R$attr.class \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/ant-build/classes/com/atthackathon/sitter/R$drawable.class \
+/Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/ant-build/classes/com/atthackathon/sitter/R$raw.class \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/ant-build/classes/com/atthackathon/sitter/R$string.class \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/ant-build/classes/com/atthackathon/sitter/R$xml.class \
 /Users/briano/Documents/AT&T/2015 Dev Summit Hackathon/sitter/sitter-mobile-app/platforms/android/ant-build/classes/com/atthackathon/sitter/R.class \
